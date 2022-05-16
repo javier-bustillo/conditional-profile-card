@@ -4,6 +4,7 @@ import "../style/index.css";
  *  EDIT ONLY INSIDE THIS RENDER FUNCTION
  *  This function is called every time the user changes types or changes any input
  * 
+ *
     {
         includeCover: true, // if includeCover is true the algorithm should
         background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da", // this is the url of the image that will used as background for the profile cover
