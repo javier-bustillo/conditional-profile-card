@@ -57,10 +57,10 @@ function render(variables = {}) {
           <h2>${variables.role}</h2>
           <h3>${variables.city}, ${variables.country}</h3>
           <ul class=${variables.socialMediaPosition}>
-            <li><a href="https://twitter.com/RockFM_ES?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/javierbustillo"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://www.instagram.com/rockfm/?hl=es"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="${variables.twitter}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="${variables.github}" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="${variables.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="${variables.instagram}" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
@@ -81,7 +81,7 @@ window.onload = function() {
     socialMediaPosition: "position-left",
     // social media usernames
     twitter: null,
-    github: "alesanchezr",
+    github: null,
     linkedin: null,
     instagram: null,
     name: "Name",
@@ -105,7 +105,7 @@ window.onload = function() {
           : this.value == "false"
           ? false
           : this.value;
-      render(Object.assign(window.variables, values)); // render again the card with new valus
+      render(Object.assign(window.variables, values)); // render again the card with new values
     });
   });
 };
